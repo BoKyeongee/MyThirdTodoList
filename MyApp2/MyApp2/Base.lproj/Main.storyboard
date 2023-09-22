@@ -49,7 +49,7 @@
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="UZd-hE-dfJ" kind="show" id="2Ee-gq-rXq"/>
+                                    <segue destination="4M1-US-Ahe" kind="show" id="dYM-WC-5RI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMC-xu-m2O">
@@ -62,7 +62,7 @@
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="TVl-CJ-7qx" kind="show" id="puN-oR-H6B"/>
+                                    <segue destination="UhT-qd-mOC" kind="show" id="zEy-Aj-7l5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ImN-tS-VUJ">
@@ -104,30 +104,6 @@
             </objects>
             <point key="canvasLocation" x="-766" y="-131"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="kCs-0f-BLA">
-            <objects>
-                <tabBarController id="UZd-hE-dfJ" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="xho-Wh-EGE"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fxX-bP-YCp">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <tabBarAppearance key="scrollEdgeAppearance">
-                            <color key="selectionIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </tabBarAppearance>
-                    </tabBar>
-                    <connections>
-                        <segue destination="bvI-YG-E4n" kind="relationship" relationship="viewControllers" id="f0R-ZC-BY0"/>
-                        <segue destination="Cye-sH-ENW" kind="relationship" relationship="viewControllers" id="o2D-4n-LBc"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uib-z8-1jv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="10" y="-346"/>
-        </scene>
         <!--해야 할 일-->
         <scene sceneID="jpb-g2-PEQ">
             <objects>
@@ -141,11 +117,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="61" id="u3H-RE-2Y4" customClass="TodoViewControllerCell" customModule="MyApp2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="61"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskCell" rowHeight="110" id="u3H-RE-2Y4" customClass="TodoTableViewCell" customModule="MyApp2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u3H-RE-2Y4" id="pFN-dd-eZV">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="61"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpC-kH-1tG">
@@ -160,16 +136,39 @@
                                                     <state key="selected" image="checkmark.square" catalog="system"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="할 일 목록 입니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbk-gV-qp6">
-                                                    <rect key="frame" x="59" y="17" width="314" height="27"/>
+                                                    <rect key="frame" x="59" y="17" width="290" height="27"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="수정일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tsp-5g-u8d">
+                                                    <rect key="frame" x="59" y="78" width="314" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAM-qS-Ypq">
+                                                    <rect key="frame" x="338" y="12" width="48" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="ellipsis" catalog="system" title=""/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="생성일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9l-Xb-QDf">
+                                                    <rect key="frame" x="59" y="55" width="314" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cellMenuBtn" destination="aAM-qS-Ypq" id="qW4-70-dSQ"/>
                                             <outlet property="checkBox" destination="cpC-kH-1tG" id="C7P-lB-aj4"/>
+                                            <outlet property="createDateLabel" destination="w9l-Xb-QDf" id="OXh-vW-ILp"/>
+                                            <outlet property="modifyDateLabel" destination="Tsp-5g-u8d" id="9uk-bh-v2z"/>
                                             <outlet property="todoLabel" destination="jbk-gV-qp6" id="xVJ-7K-u3v"/>
                                         </connections>
                                     </tableViewCell>
@@ -181,15 +180,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="해야 할 일" id="o4F-h7-9Eo">
                         <rightBarButtonItems>
-                            <barButtonItem image="plus.rectangle.on.folder" catalog="system" id="WdA-6g-AdN">
+                            <barButtonItem image="ellipsis.circle" catalog="system" id="WdA-6g-AdN">
                                 <connections>
                                     <segue destination="XEq-sa-kZo" kind="presentation" id="e7F-vu-8OI"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="plus" catalog="system" id="f8m-oh-JWX">
                                 <connections>
-                                    <action selector="addTask:" destination="4M1-US-Ahe" id="Lpi-PJ-Ajo"/>
-                                    <segue destination="bzb-yu-jOb" kind="presentation" id="PMA-Kx-7Yh"/>
+                                    <action selector="inputPopup:" destination="4M1-US-Ahe" id="oy8-qB-5iA"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -200,7 +198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Fi-s0-GFo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1744.2748091603053" y="-715.49295774647896"/>
+            <point key="canvasLocation" x="-22.137404580152669" y="-132.3943661971831"/>
         </scene>
         <!--Input Category View Controller-->
         <scene sceneID="LNi-EY-ZhP">
@@ -267,7 +265,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zJ9-IT-afp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2512" y="-715"/>
+            <point key="canvasLocation" x="763" y="-132"/>
         </scene>
         <!--완료한 일-->
         <scene sceneID="RoB-P8-o3o">
@@ -321,69 +319,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NbU-kq-SQY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1724.4274809160304" y="-5.6338028169014089"/>
-        </scene>
-        <!--한 일 목록-->
-        <scene sceneID="g58-1V-oFy">
-            <objects>
-                <viewController id="TVl-CJ-7qx" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wCJ-37-YLg">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="c2z-VG-BTx"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="IzT-Tk-2NH"/>
-                    <navigationItem key="navigationItem" title="한 일 목록" id="5ZH-vL-Qno"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="miI-TZ-S8z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="10" y="356"/>
-        </scene>
-        <!--할 일-->
-        <scene sceneID="Gyq-cQ-cQQ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bvI-YG-E4n" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="할 일" image="tray" catalog="system" id="ECX-Vu-MRQ"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qBn-qF-ULn">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="4M1-US-Ahe" kind="relationship" relationship="rootViewController" id="1Ko-eb-LWL"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hyk-eJ-O65" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="798" y="-715"/>
-        </scene>
-        <!--완료한 일-->
-        <scene sceneID="FIY-OB-ua1">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cye-sH-ENW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="완료한 일" image="tray.full.fill" catalog="system" id="qLV-Wl-rQg"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="70T-6v-7CW">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="UhT-qd-mOC" kind="relationship" relationship="rootViewController" id="gGq-EJ-gCb"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2y8-N7-acR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="797.70992366412213" y="-5.6338028169014089"/>
+            <point key="canvasLocation" x="-8" y="604"/>
         </scene>
         <!--Input Todo View Controller-->
         <scene sceneID="t2G-ei-td0">
             <objects>
                 <viewController storyboardIdentifier="inputTodoViewControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bzb-yu-jOb" customClass="InputTodoViewController" customModule="MyApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f2f-xb-hwr">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OII-Ln-OId">
@@ -395,8 +338,8 @@
                                     <action selector="save:" destination="bzb-yu-jOb" eventType="touchUpInside" id="cOl-dW-kW3"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="할 일 입력" borderStyle="roundedRect" placeholder="추가할 카테고리 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="re4-n4-w5y" userLabel="할 일 메모">
-                                <rect key="frame" x="33" y="166" width="326" height="36"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="할 일을 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="re4-n4-w5y" userLabel="할 일 메모">
+                                <rect key="frame" x="33" y="421" width="326" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -409,22 +352,15 @@
                                     <action selector="cancel:" destination="bzb-yu-jOb" eventType="touchUpInside" id="hc8-KM-VpQ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="할 일 추가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhF-cW-nCu">
-                                <rect key="frame" x="33" y="106" width="117" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="카테고리 선택" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30u-aA-a0n">
-                                <rect key="frame" x="33" y="250" width="163" height="36"/>
+                                <rect key="frame" x="41" y="480" width="163" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0HD-20-VZg">
-                                <rect key="frame" x="41" y="313" width="310" height="52"/>
+                                <rect key="frame" x="41" y="524" width="310" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <menu key="menu" id="Cdh-Ev-ydo">
                                     <menuOptions key="menuOptions" displayInline="YES" singleSelection="YES"/>
@@ -433,10 +369,17 @@
                                         <command title="Item 2" id="17T-15-19u"/>
                                     </children>
                                 </menu>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="카테고리 기능 완성 전입니다"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="할 일 추가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhF-cW-nCu">
+                                <rect key="frame" x="41" y="367" width="117" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="xPK-ma-NRP"/>
+                        <viewLayoutGuide key="safeArea" id="p0A-cF-5wM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="4fy-Dx-UHs"/>
@@ -447,7 +390,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pqw-xf-kC0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2512" y="-1377"/>
+            <point key="canvasLocation" x="763" y="-777"/>
         </scene>
         <!--Profile Design View Controller-->
         <scene sceneID="4M1-hm-eGE">
@@ -658,7 +601,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iVF-nI-143" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-767.17557251908397" y="634.50704225352115"/>
+            <point key="canvasLocation" x="-767" y="604"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -674,11 +617,10 @@
         <image name="checkmark.square" catalog="system" width="128" height="114"/>
         <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <image name="ellipsis.circle" catalog="system" width="128" height="123"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="plus.rectangle.on.folder" catalog="system" width="128" height="95"/>
         <image name="square.dashed" catalog="system" width="128" height="114"/>
-        <image name="tray" catalog="system" width="128" height="88"/>
-        <image name="tray.full.fill" catalog="system" width="128" height="88"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

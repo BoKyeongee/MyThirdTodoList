@@ -8,6 +8,8 @@
 import UIKit
 import SnapKit
 
+let imageDummyName = ["picture", "picture2", "picture3", "picture4", "picture5", "picture6"]
+
 class ProfileDesignViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     // 프로필 상단
