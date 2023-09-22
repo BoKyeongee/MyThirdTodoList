@@ -47,21 +47,21 @@ class InputCategoryViewController: UIViewController {
     }
     
     @IBAction func save(_ sender: Any) {
-        var category = defaults.array(forKey: "category") ?? data.category
-        var emoji = defaults.array(forKey: "emoji") ?? data.emoji
+//        var category = defaults.array(forKey: "category") ?? data.category
+//        var emoji = defaults.array(forKey: "emoji") ?? data.emoji
         
-        guard textfield.text != nil else
-        { return print("입력값이 없습니다")}
-        tempData.updateValue(textfield.text!, forKey: "textfield")
-        
-        category.append(tempData["textfield"])
-        emoji.append(tempData["emoji"])
-        
-        defaults.set(category, forKey: "category")
-        defaults.set(emoji, forKey: "emoji")
-        
-        print(defaults.array(forKey: "category")!)
-        print(defaults.array(forKey: "emoji")!)
+//        guard textfield.text != nil else
+//        { return print("입력값이 없습니다")}
+//        tempData.updateValue(textfield.text!, forKey: "textfield")
+//        
+//        category.append(tempData["textfield"])
+//        emoji.append(tempData["emoji"])
+//        
+//        defaults.set(category, forKey: "category")
+//        defaults.set(emoji, forKey: "emoji")
+//
+//        print(defaults.array(forKey: "category")!)
+//        print(defaults.array(forKey: "emoji")!)
         
         self.dismiss(animated: true)
     }

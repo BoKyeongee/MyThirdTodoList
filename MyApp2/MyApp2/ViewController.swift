@@ -8,6 +8,7 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+import CoreData
 
 class ViewController: UIViewController {
     
@@ -15,11 +16,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Userdefaults 기본값 세팅
-        let defaultSettings = ["todoData": data.todoData, "doneData": data.doneData, "category": data.category, "emoji":data.emoji] as [String : Any]
-        defaults.register(defaults: defaultSettings)
-        
         // navigaiton back 버튼 검정색 뒤로가기로 변경
         let backBarButtonItem = UIBarButtonItem(title: "뒤로", style: .plain, target: self, action: nil)
                     backBarButtonItem.tintColor = .black
@@ -54,4 +50,7 @@ class ViewController: UIViewController {
         
         navigationController?.pushViewController(nextVC, animated: true)
     }
+    
+    
+    
 }

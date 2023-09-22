@@ -20,9 +20,11 @@
 		DC9FA5202A96DFAC00E4CDA4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DC9FA51F2A96DFAC00E4CDA4 /* Alamofire */; };
 		DC9FA5232A96E11400E4CDA4 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = DC9FA5222A96E11400E4CDA4 /* AlamofireImage */; };
 		DC9FA5252A98766D00E4CDA4 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9FA5242A98766D00E4CDA4 /* Data.swift */; };
+		DCD234DC2ABD0F3200210C84 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD234DB2ABD0F3200210C84 /* TaskViewModel.swift */; };
+		DCD234DE2ABD433700210C84 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD234DD2ABD433700210C84 /* TaskModel.swift */; };
+		DCD234E02ABD4C6400210C84 /* TaskCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD234DF2ABD4C6400210C84 /* TaskCategoryViewModel.swift */; };
 		DCD4F5912A9F1A7B0027B9A7 /* CustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD4F5902A9F1A7B0027B9A7 /* CustomHeader.swift */; };
 		DCDA7C972ABADC4200BF148D /* ProfileDesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDA7C962ABADC4200BF148D /* ProfileDesignViewController.swift */; };
-		DCDA7C9B2ABB240B00BF148D /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDA7C9A2ABB240B00BF148D /* File.swift */; };
 		DCDA7C9E2ABBE74E00BF148D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DCDA7C9D2ABBE74E00BF148D /* SnapKit */; };
 		DCDD63A92AA1299700EFBBF4 /* InputCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD63A82AA1299700EFBBF4 /* InputCategoryViewController.swift */; };
 		DCDD63AC2AA12B6300EFBBF4 /* EmojiPicker in Frameworks */ = {isa = PBXBuildFile; productRef = DCDD63AB2AA12B6300EFBBF4 /* EmojiPicker */; };
@@ -67,9 +69,11 @@
 		DC2D069A2A9F3A5F006EEBB2 /* DoneTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTableViewController.swift; sourceTree = "<group>"; };
 		DC78816B2A8515AD00FAFBD8 /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		DC9FA5242A98766D00E4CDA4 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		DCD234DB2ABD0F3200210C84 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		DCD234DD2ABD433700210C84 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		DCD234DF2ABD4C6400210C84 /* TaskCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCategoryViewModel.swift; sourceTree = "<group>"; };
 		DCD4F5902A9F1A7B0027B9A7 /* CustomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeader.swift; sourceTree = "<group>"; };
 		DCDA7C962ABADC4200BF148D /* ProfileDesignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDesignViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
-		DCDA7C9A2ABB240B00BF148D /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = File.swift; path = ../../../../../Documents/File.swift; sourceTree = "<group>"; };
 		DCDD63A82AA1299700EFBBF4 /* InputCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCategoryViewController.swift; sourceTree = "<group>"; };
 		DCDD63AD2AA136AC00EFBBF4 /* InputTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTodoViewController.swift; sourceTree = "<group>"; };
 		DCF8EACF2ABCF43000A42983 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -140,8 +144,6 @@
 				C018A5CF2A7B8EFC0005939A /* Assets.xcassets */,
 				C018A5D12A7B8EFC0005939A /* LaunchScreen.storyboard */,
 				C018A5D42A7B8EFC0005939A /* Info.plist */,
-				C018A5F62A7B99810005939A /* TodoTableViewController.swift */,
-				DC78816B2A8515AD00FAFBD8 /* TodoTableViewCell.swift */,
 				DC9FA5242A98766D00E4CDA4 /* Data.swift */,
 				DCD4F5902A9F1A7B0027B9A7 /* CustomHeader.swift */,
 				DC2D069A2A9F3A5F006EEBB2 /* DoneTableViewController.swift */,
@@ -149,7 +151,6 @@
 				DCDD63A82AA1299700EFBBF4 /* InputCategoryViewController.swift */,
 				DCDD63AD2AA136AC00EFBBF4 /* InputTodoViewController.swift */,
 				DCDA7C962ABADC4200BF148D /* ProfileDesignViewController.swift */,
-				DCDA7C9A2ABB240B00BF148D /* File.swift */,
 			);
 			path = MyApp2;
 			sourceTree = "<group>";
@@ -157,6 +158,8 @@
 		DCF8EAD32ABCF6B900A42983 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C018A5F62A7B99810005939A /* TodoTableViewController.swift */,
+				DC78816B2A8515AD00FAFBD8 /* TodoTableViewCell.swift */,
 				DCF8EACF2ABCF43000A42983 /* ProfileViewController.swift */,
 				DCF8EAD42ABCF6E700A42983 /* SimpleProfileView.swift */,
 			);
@@ -167,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				DCF8EAD12ABCF45500A42983 /* SimpleProfileModel.swift */,
+				DCD234DD2ABD433700210C84 /* TaskModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				DCF8EAD82ABCF78500A42983 /* SimpleProfileViewModel.swift */,
+				DCD234DB2ABD0F3200210C84 /* TaskViewModel.swift */,
+				DCD234DF2ABD4C6400210C84 /* TaskCategoryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -327,17 +333,19 @@
 				DCF8EADC2ABD021D00A42983 /* CoreData.xcdatamodeld in Sources */,
 				DCDA7C972ABADC4200BF148D /* ProfileDesignViewController.swift in Sources */,
 				DCD4F5912A9F1A7B0027B9A7 /* CustomHeader.swift in Sources */,
+				DCD234DE2ABD433700210C84 /* TaskModel.swift in Sources */,
 				DCF8EAD02ABCF43000A42983 /* ProfileViewController.swift in Sources */,
 				DCF8EAD22ABCF45500A42983 /* SimpleProfileModel.swift in Sources */,
+				DCD234DC2ABD0F3200210C84 /* TaskViewModel.swift in Sources */,
 				DC9FA5252A98766D00E4CDA4 /* Data.swift in Sources */,
 				C018A5CB2A7B8EFA0005939A /* ViewController.swift in Sources */,
 				DCF8EAD52ABCF6E700A42983 /* SimpleProfileView.swift in Sources */,
 				DCF8EAD92ABCF78500A42983 /* SimpleProfileViewModel.swift in Sources */,
 				DC78816C2A8515AD00FAFBD8 /* TodoTableViewCell.swift in Sources */,
 				C018A5C72A7B8EFA0005939A /* AppDelegate.swift in Sources */,
+				DCD234E02ABD4C6400210C84 /* TaskCategoryViewModel.swift in Sources */,
 				DCDD63A92AA1299700EFBBF4 /* InputCategoryViewController.swift in Sources */,
 				C08E8DDA2AA0B4FC00BE8B25 /* DoneTableViewCell.swift in Sources */,
-				DCDA7C9B2ABB240B00BF148D /* File.swift in Sources */,
 				C018A5C92A7B8EFA0005939A /* SceneDelegate.swift in Sources */,
 				DCDD63AE2AA136AC00EFBBF4 /* InputTodoViewController.swift in Sources */,
 			);
