@@ -8,6 +8,7 @@
 import Foundation
 import CoreData
 
+
 class TaskViewModel {
     
     private var task: Task?  // CoreData Entity
@@ -49,21 +50,37 @@ class TaskViewModel {
     // CoreData에서 Task를 가져오는 메소드
     func fetchTasks() -> [TaskViewModel] {
         let request: NSFetchRequest<Task> = Task.fetchRequest()
-        do {
-            let managedTasks = try context.fetch(request)
-            return managedTasks.map { TaskViewModel(managedTask: $0, context: context) }
-        } catch {
-            print("Error fetching tasks: \(error)")
-            return []
-        }
+            do {
+                let managedTasks = try context.fetch(request)
+                print("Fetched tasks: \(managedTasks.count)")
+                for task in managedTasks {
+                    print("Task title: \(task.title ?? "No title")")
+                }
+                return managedTasks.map { TaskViewModel(managedTask: $0, context: context) }
+            } catch {
+                print("Error fetching tasks: \(error)")
+                return []
+            }
     }
     
     // CoreData에 Task를 저장하는 메소드
     func saveTask() {
-        do {
-            try context.save()
-        } catch {
-            print("Error saving task: \(error)")
-        }
+        guard let task = self.task else { return }
+
+        task.id = todo.id
+        task.title = todo.title
+        task.category = todo.category
+        task.createDate = todo.createDate
+        task.modifyDate = todo.modifyDate
+        task.isCompleted = todo.isCompleted
+
+        print("Saving task with title: \(todo.title)")
+
+            do {
+                try context.save()
+                print("Task saved successfully.")
+            } catch {
+                print("Error saving task: \(error)")
+            }
     }
 }

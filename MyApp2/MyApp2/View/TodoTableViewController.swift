@@ -18,7 +18,6 @@ class TodoViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var tableView: UITableView!
     
     override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
         
     }
     
@@ -28,7 +27,6 @@ class TodoViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // 테이블뷰 delegate
         tableView.delegate = self
         tableView.dataSource = self
-        
         fetchTasks()
     }
     
@@ -61,7 +59,31 @@ class TodoViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // 기타 필요한 UI 설정 코드 (예: isCompleted에 따라서 체크 표시 등)
         return cell
     }
+
+
     @IBAction func inputPopup(_ sender: Any) {
+        let alertController = UIAlertController(title: "할 일 입력", message: "해야 할 일을 입력하세요", preferredStyle: .alert)
+        
+        alertController.addTextField { textField in
+                    textField.placeholder = "할 일  입력"
+                }
+        
+        let saveAction = UIAlertAction(title: "Save", style: .default) { [weak self] _ in
+            guard let self = self else { return }
+            if let title = alertController.textFields?.first?.text, !title.isEmpty {
+                let newTask = Todo(id: UUID(), title: title, category: "", createDate: Date(), modifyDate: nil, isCompleted: false)
+                let taskViewModel = TaskViewModel(context: self.context, todo: newTask)
+                taskViewModel.saveTask()
+                print(newTask)
+                self.fetchTasks()
+            }
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+
+        present(alertController, animated: true, completion: nil)
     }
     
 }
